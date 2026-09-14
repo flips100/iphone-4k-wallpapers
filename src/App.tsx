@@ -15,7 +15,7 @@ export default function App() {
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
-    return WALLOPERS.filter((w) => {
+    return WALLPAPERS.filter((w) => {
       if (filter === 'favorites' && !favorites.includes(w.id)) return false
       if (filter !== 'all' && filter !== 'favorites' && w.category !== filter) return false
       if (!q) return true
